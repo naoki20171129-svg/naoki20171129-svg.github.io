@@ -1,9 +1,4 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
-
-"PhysRev":
-  url: https://journals.aps.org/
-
-"Vision":
-  color: "#009f36"
+# 論文の一覧で、掲載先の略称（abbr）に付ける色とリンク
+"bioRxiv":
+  url: https://www.biorxiv.org/
+  color: "#b31b1b"

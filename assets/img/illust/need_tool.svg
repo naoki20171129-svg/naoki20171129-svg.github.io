@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" role="img" aria-label="Tools that plant scientists can use">
+  <rect width="160" height="120" rx="16" fill="#f3f6f4"/>
+  <!-- window / app -->
+  <rect x="22" y="22" width="116" height="78" rx="8" fill="#ffffff" stroke="#3a4652" stroke-width="2.5"/>
+  <line x1="22" y1="36" x2="138" y2="36" stroke="#3a4652" stroke-width="2"/>
+  <g fill="#e07a5f"><circle cx="31" cy="29" r="3"/></g><g fill="#f2c46d"><circle cx="41" cy="29" r="3"/></g><g fill="#7cc6a4"><circle cx="51" cy="29" r="3"/></g>
+  <!-- leaf -->
+  <path d="M44 88 C40 66 52 50 74 46 C76 68 66 84 44 88 Z" fill="#7cc6a4" stroke="#3f8a5f" stroke-width="2"/>
+  <path d="M46 86 C54 74 62 64 72 50" stroke="#3f8a5f" stroke-width="1.6" fill="none"/>
+  <!-- one-click button -->
+  <rect x="86" y="58" width="42" height="18" rx="9" fill="#6d93c4"/>
+  <path d="M100 62 L100 72 L110 67 Z" fill="#ffffff"/>
+  <!-- cursor -->
+  <path d="M116 70 L116 92 L122 86 L127 96 L131 94 L126 84 L134 84 Z" fill="#3a4652"/>
+</svg>

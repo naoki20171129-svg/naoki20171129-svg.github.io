@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 150" role="img" aria-label="Bridging plant biology and informatics">
+  <rect width="360" height="150" rx="18" fill="#f3f6f4"/>
+  <!-- left: moss with rhizoids (biology) -->
+  <g>
+    <path d="M58 70 C50 56 52 40 60 30 C66 44 66 58 58 70 Z" fill="#7cc6a4" stroke="#3f8a5f" stroke-width="2"/>
+    <path d="M58 70 C66 58 78 52 92 52 C86 64 74 70 58 70 Z" fill="#a8d8c0" stroke="#3f8a5f" stroke-width="2"/>
+    <path d="M58 70 C50 60 36 56 24 58 C30 68 44 72 58 70 Z" fill="#a8d8c0" stroke="#3f8a5f" stroke-width="2"/>
+    <rect x="55" y="68" width="6" height="16" rx="2" fill="#5fae7f"/>
+    <g stroke="#a0714a" stroke-width="2" fill="none" stroke-linecap="round">
+      <path d="M58 84 C56 98 48 108 44 122"/><path d="M58 84 C60 100 66 110 64 126"/><path d="M58 84 C64 96 76 104 82 118"/><path d="M58 84 C52 94 40 100 32 110"/>
+    </g>
+    <line x1="14" y1="86" x2="104" y2="86" stroke="#c99a6b" stroke-width="3" stroke-dasharray="6 5"/>
+  </g>
+  <!-- bridge -->
+  <path d="M110 104 C150 40 210 40 250 104" fill="none" stroke="#e07a5f" stroke-width="5" stroke-linecap="round"/>
+  <g stroke="#e07a5f" stroke-width="2.5">
+    <line x1="140" y1="104" x2="140" y2="66"/><line x1="160" y1="104" x2="160" y2="56"/><line x1="180" y1="104" x2="180" y2="53"/>
+    <line x1="200" y1="104" x2="200" y2="56"/><line x1="220" y1="104" x2="220" y2="66"/>
+  </g>
+  <line x1="104" y1="104" x2="256" y2="104" stroke="#3a4652" stroke-width="5" stroke-linecap="round"/>
+  <!-- right: laptop with code (informatics) -->
+  <g>
+    <rect x="266" y="44" width="76" height="52" rx="5" fill="#3a4652"/>
+    <rect x="272" y="50" width="64" height="40" rx="2" fill="#e8eef5"/>
+    <g stroke="#6d93c4" stroke-width="3" stroke-linecap="round" fill="none">
+      <path d="M288 62 L280 70 L288 78"/><path d="M320 62 L328 70 L320 78"/><path d="M309 60 L299 80"/>
+    </g>
+    <path d="M258 98 L350 98 L344 108 L264 108 Z" fill="#5b6b7a"/>
+  </g>
+</svg>

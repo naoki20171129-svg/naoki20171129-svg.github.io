@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" role="img" aria-label="No public micro-CT cell dataset">
+  <rect width="160" height="120" rx="16" fill="#f3f6f4"/>
+  <!-- database: microscopy (full) -->
+  <g stroke="#3a4652" stroke-width="2">
+    <path d="M18 34 L18 86 C18 94 64 94 64 86 L64 34" fill="#8fb3e0"/>
+    <ellipse cx="41" cy="34" rx="23" ry="8" fill="#c3d6f0"/>
+    <path d="M18 52 C18 60 64 60 64 52" fill="none"/><path d="M18 70 C18 78 64 78 64 70" fill="none"/>
+  </g>
+  <!-- database: micro-CT cells (empty, dashed) -->
+  <g stroke="#9aa7b3" stroke-width="2" stroke-dasharray="5 4" fill="none">
+    <path d="M96 34 L96 86 C96 94 142 94 142 86 L142 34"/>
+    <ellipse cx="119" cy="34" rx="23" ry="8"/>
+  </g>
+  <text x="119" y="72" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#e07a5f">?</text>
+  <!-- tiny icons: microscope / CT -->
+  <g transform="translate(30 98)" stroke="#3a4652" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M6 0 L14 10"/><path d="M2 14 L20 14"/><path d="M12 10 L12 14"/><circle cx="5" cy="1" r="2.5" fill="#3a4652"/>
+  </g>
+  <g transform="translate(108 98)" stroke="#3a4652" stroke-width="2" fill="none">
+    <circle cx="11" cy="8" r="7"/><circle cx="11" cy="8" r="2.5" fill="#c99a6b"/>
+  </g>
+</svg>

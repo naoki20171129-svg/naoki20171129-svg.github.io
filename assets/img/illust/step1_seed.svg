@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" role="img" aria-label="Arabidopsis seed">
+  <rect width="200" height="150" rx="18" fill="#f3f6f4"/>
+  <!-- seed coat -->
+  <ellipse cx="100" cy="76" rx="66" ry="46" fill="#c99a6b" stroke="#8a6040" stroke-width="3"/>
+  <ellipse cx="100" cy="76" rx="57" ry="38" fill="#f1e3cc"/>
+  <!-- folded embryo: cotyledons (upper) and hypocotyl-radicle (lower) -->
+  <path d="M62 66 C64 46 104 40 128 47 C147 53 152 68 143 79" fill="none" stroke="#5fae7f" stroke-width="17" stroke-linecap="round"/>
+  <path d="M64 92 C84 103 122 103 143 88" fill="none" stroke="#8fcca2" stroke-width="15" stroke-linecap="round"/>
+  <!-- cell texture -->
+  <g fill="#ffffff" opacity="0.7">
+    <circle cx="80" cy="52" r="2.6"/><circle cx="96" cy="47" r="2.6"/><circle cx="112" cy="47" r="2.6"/><circle cx="127" cy="51" r="2.6"/><circle cx="139" cy="63" r="2.6"/>
+    <circle cx="80" cy="97" r="2.4"/><circle cx="96" cy="100" r="2.4"/><circle cx="112" cy="100" r="2.4"/><circle cx="127" cy="96" r="2.4"/>
+  </g>
+  <!-- scale hint: "0.5 mm" bar -->
+  <line x1="138" y1="134" x2="178" y2="134" stroke="#3a4652" stroke-width="3" stroke-linecap="round"/>
+</svg>

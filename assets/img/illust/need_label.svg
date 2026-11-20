@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" role="img" aria-label="Learning from a few annotations">
+  <rect width="160" height="120" rx="16" fill="#f3f6f4"/>
+  <!-- grid of cells: few annotated (coloured), most unlabelled (outline) -->
+  <g stroke="#9aa7b3" stroke-width="1.6" fill="#ffffff">
+    <rect x="18" y="20" width="22" height="22" rx="7"/><rect x="44" y="20" width="22" height="22" rx="7"/><rect x="70" y="20" width="22" height="22" rx="7"/>
+    <rect x="18" y="46" width="22" height="22" rx="7"/><rect x="44" y="46" width="22" height="22" rx="7"/><rect x="70" y="46" width="22" height="22" rx="7"/>
+    <rect x="18" y="72" width="22" height="22" rx="7"/><rect x="44" y="72" width="22" height="22" rx="7"/><rect x="70" y="72" width="22" height="22" rx="7"/>
+  </g>
+  <g stroke="#3a4652" stroke-width="1.6">
+    <rect x="18" y="20" width="22" height="22" rx="7" fill="#e98a7a"/><rect x="44" y="46" width="22" height="22" rx="7" fill="#7cc6a4"/>
+  </g>
+  <!-- arrow: few labels -> all labels -->
+  <path d="M98 57 L114 57" stroke="#e07a5f" stroke-width="4" stroke-linecap="round"/><path d="M109 51 L116 57 L109 63" fill="none" stroke="#e07a5f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g stroke="#3a4652" stroke-width="1.4">
+    <rect x="122" y="34" width="14" height="14" rx="4" fill="#e98a7a"/><rect x="138" y="34" width="14" height="14" rx="4" fill="#f2c46d"/>
+    <rect x="122" y="50" width="14" height="14" rx="4" fill="#8fb3e0"/><rect x="138" y="50" width="14" height="14" rx="4" fill="#7cc6a4"/>
+    <rect x="122" y="66" width="14" height="14" rx="4" fill="#c7a6e0"/><rect x="138" y="66" width="14" height="14" rx="4" fill="#a8d8c0"/>
+  </g>
+  <!-- pencil -->
+  <g transform="rotate(-35 48 104)">
+    <rect x="30" y="99" width="34" height="9" rx="2" fill="#f2c46d" stroke="#3a4652" stroke-width="1.4"/>
+    <polygon points="64,99 72,103.5 64,108" fill="#f1e3cc" stroke="#3a4652" stroke-width="1.4"/>
+  </g>
+</svg>
