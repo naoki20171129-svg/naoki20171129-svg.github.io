@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" role="img" aria-label="Individually segmented 3D cells compared across organs">
+  <rect width="200" height="150" rx="18" fill="#f3f6f4"/>
+  <!-- cluster of 3D cells (isometric boxes) -->
+  <g stroke="#3a4652" stroke-width="1.6" stroke-linejoin="round">
+    <!-- back row -->
+    <polygon points="42,58 66,46 90,58 66,70" fill="#a8d8c0"/><polygon points="42,58 66,70 66,96 42,84" fill="#7cc6a4"/><polygon points="66,70 90,58 90,84 66,96" fill="#5fae7f"/>
+    <polygon points="90,58 114,46 138,58 114,70" fill="#f7d996"/><polygon points="90,58 114,70 114,96 90,84" fill="#f2c46d"/><polygon points="114,70 138,58 138,84 114,96" fill="#d9a441"/>
+    <!-- front row -->
+    <polygon points="66,84 90,72 114,84 90,96" fill="#f3b3a6"/><polygon points="66,84 90,96 90,122 66,110" fill="#e98a7a"/><polygon points="90,96 114,84 114,110 90,122" fill="#c96a5b"/>
+    <polygon points="30,96 48,87 66,96 48,105" fill="#c3d6f0"/><polygon points="30,96 48,105 48,124 30,115" fill="#8fb3e0"/><polygon points="48,105 66,96 66,115 48,124" fill="#6d93c4"/>
+  </g>
+  <!-- organ comparison bars -->
+  <g>
+    <line x1="146" y1="124" x2="188" y2="124" stroke="#3a4652" stroke-width="2"/>
+    <rect x="150" y="92" width="9" height="32" rx="2" fill="#7cc6a4"/>
+    <rect x="163" y="74" width="9" height="50" rx="2" fill="#f2c46d"/>
+    <rect x="176" y="100" width="9" height="24" rx="2" fill="#e98a7a"/>
+  </g>
+</svg>

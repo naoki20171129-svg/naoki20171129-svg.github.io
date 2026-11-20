@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" role="img" aria-label="3D CT volume made of stacked slices">
+  <rect width="200" height="150" rx="18" fill="#f3f6f4"/>
+  <!-- stacked slices (bottom to top) -->
+  <g stroke="#3a4652" stroke-width="2" stroke-linejoin="round">
+    <polygon points="40,118 128,118 162,96 74,96" fill="#7d8a96"/>
+    <polygon points="40,104 128,104 162,82 74,82" fill="#95a1ac"/>
+    <polygon points="40,90 128,90 162,68 74,68" fill="#adb7c0"/>
+    <polygon points="40,76 128,76 162,54 74,54" fill="#c5cdd4"/>
+    <polygon points="40,62 128,62 162,40 74,40" fill="#e2e7eb"/>
+  </g>
+  <!-- cell pattern on the top slice -->
+  <g fill="#ffffff" stroke="#6b7884" stroke-width="1.2">
+    <ellipse cx="78" cy="56" rx="11" ry="5"/><ellipse cx="100" cy="56" rx="10" ry="5"/><ellipse cx="121" cy="56" rx="11" ry="5"/>
+    <ellipse cx="92" cy="47" rx="10" ry="4.5"/><ellipse cx="113" cy="47" rx="10" ry="4.5"/><ellipse cx="134" cy="47" rx="9" ry="4.5"/>
+  </g>
+  <!-- axis arrows -->
+  <g stroke="#e07a5f" stroke-width="3" stroke-linecap="round" fill="none">
+    <path d="M30 126 L30 30"/><path d="M24 38 L30 30 L36 38"/>
+  </g>
+</svg>

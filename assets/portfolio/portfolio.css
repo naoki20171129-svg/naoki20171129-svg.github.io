@@ -1,0 +1,388 @@
+/* ポートフォリオの見た目（al-folio の色の変数を使うので、ライト・ダークの両方で読める） */
+
+/* ---- 言語の切り替え（日本語 / English） ---- */
+html:not([data-lang="en"]) .en {
+  display: none !important;
+}
+html[data-lang="en"] .ja {
+  display: none !important;
+}
+
+.pf-lang {
+  position: sticky;
+  top: 64px;
+  z-index: 20;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 0.5rem;
+  pointer-events: none;
+}
+.pf-lang .pf-lang-group {
+  pointer-events: auto;
+  display: inline-flex;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--global-bg-color);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+.pf-lang button {
+  border: 0;
+  background: transparent;
+  color: var(--global-text-color);
+  font-size: 0.85rem;
+  padding: 0.25rem 0.85rem;
+  cursor: pointer;
+}
+.pf-lang button[aria-pressed="true"] {
+  background: var(--global-theme-color);
+  color: #ffffff;
+}
+
+/* ---- 共通 ---- */
+.pf-lead {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin: 0.5rem 0 1.5rem;
+}
+.pf-lead strong {
+  color: var(--global-theme-color);
+}
+
+.pf-section {
+  margin: 3rem 0 1rem;
+}
+.pf-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.45rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+.pf-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  background: var(--global-theme-color);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  flex: 0 0 auto;
+}
+.pf-section p {
+  line-height: 1.85;
+}
+.pf-note {
+  color: var(--global-text-color-light);
+  font-size: 0.85rem;
+}
+
+/* ---- 研究の流れ（5 つの段） ---- */
+.pf-steps {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 1.2rem 0 0.5rem;
+  counter-reset: step;
+}
+.pf-step {
+  text-align: center;
+  position: relative;
+}
+.pf-step img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+.pf-step .pf-step-title {
+  font-weight: 700;
+  margin: 0.45rem 0 0.15rem;
+  font-size: 0.95rem;
+}
+.pf-step .pf-step-text {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--global-text-color-light);
+}
+.pf-step:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  top: 28%;
+  right: -0.82rem;
+  color: var(--global-theme-color);
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .pf-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .pf-step::after {
+    display: none;
+  }
+}
+
+/* ---- カード（求められる技術・課題） ---- */
+.pf-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.pf-card {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 14px;
+  padding: 0.8rem;
+  background: var(--global-bg-color);
+}
+.pf-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 0.6rem;
+}
+.pf-card h3 {
+  font-size: 1.02rem;
+  font-weight: 700;
+  margin: 0.2rem 0 0.4rem;
+}
+.pf-card p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .pf-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- 経歴の年表 ---- */
+.pf-bridge {
+  width: 100%;
+  max-width: 560px;
+  display: block;
+  margin: 0.5rem auto 1.2rem;
+  border-radius: 16px;
+}
+.pf-timeline {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+  border-left: 3px solid var(--global-divider-color);
+}
+.pf-timeline li {
+  position: relative;
+  padding: 0 0 1.2rem 1.4rem;
+}
+.pf-timeline li::before {
+  content: "";
+  position: absolute;
+  left: -0.55rem;
+  top: 0.35rem;
+  width: 0.95rem;
+  height: 0.95rem;
+  border-radius: 50%;
+  background: var(--global-bg-color);
+  border: 3px solid var(--global-theme-color);
+}
+.pf-timeline .pf-when {
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+  letter-spacing: 0.02em;
+}
+.pf-timeline .pf-what {
+  font-weight: 700;
+  margin: 0.1rem 0 0.2rem;
+}
+.pf-timeline .pf-detail {
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+/* ---- 図 ---- */
+.pf-figure {
+  margin: 1.2rem 0;
+  text-align: center;
+}
+.pf-figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.pf-figure figcaption {
+  font-size: 0.82rem;
+  color: var(--global-text-color-light);
+  margin-top: 0.45rem;
+  line-height: 1.6;
+}
+
+.pf-cells {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr 1fr;
+  gap: 0.6rem;
+  align-items: start;
+}
+.pf-cells figure {
+  margin: 0;
+}
+.pf-cells img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.pf-cells figcaption {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 0.3rem;
+  color: var(--global-text-color-light);
+  line-height: 1.45;
+}
+@media (max-width: 767px) {
+  .pf-cells {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ---- 進み具合 ---- */
+.pf-progress {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+.pf-progress li {
+  display: grid;
+  grid-template-columns: 5.2rem 1fr;
+  gap: 0.8rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px dashed var(--global-divider-color);
+}
+.pf-chip {
+  display: inline-block;
+  text-align: center;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.18rem 0.5rem;
+  height: fit-content;
+  color: #ffffff;
+}
+.pf-chip.done {
+  background: #3f8a5f;
+}
+.pf-chip.now {
+  background: #d9822b;
+}
+.pf-chip.next {
+  background: #7d8a96;
+}
+.pf-progress .pf-p-title {
+  font-weight: 700;
+}
+.pf-progress .pf-p-text {
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+/* ---- プロフィール ---- */
+.pf-profile {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: 0.4rem 1rem;
+  margin: 1rem 0;
+}
+.pf-profile dt {
+  font-weight: 700;
+  color: var(--global-text-color-light);
+}
+.pf-profile dd {
+  margin: 0;
+}
+.pf-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.pf-tags span {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 999px;
+  padding: 0.08rem 0.6rem;
+  font-size: 0.82rem;
+}
+@media (max-width: 575px) {
+  .pf-profile {
+    grid-template-columns: 1fr;
+  }
+  .pf-profile dt {
+    margin-top: 0.6rem;
+  }
+}
+
+/* ---- 経歴: 修士の研究の流れ（横 1 列） ---- */
+.pf-hflow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1.9fr);
+  gap: 0.45rem;
+  align-items: start;
+  margin: 1.2rem 0 0.4rem;
+}
+.pf-hstep {
+  text-align: center;
+}
+.pf-hstep img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.pf-hcap {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin-top: 0.35rem;
+}
+.pf-harrow {
+  color: var(--global-theme-color);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 3.6rem; /* イラストの真ん中の高さ */
+}
+.pf-hresult {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.45rem;
+}
+.pf-hresult figure {
+  margin: 0;
+}
+.pf-hresult img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.pf-hresult .pf-hnote {
+  grid-column: 1 / -1;
+  margin: 0.2rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+.pf-hresult figcaption {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 0.3rem;
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .pf-hflow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .pf-harrow {
+    display: none;
+  }
+  .pf-hresult {
+    grid-column: 1 / -1;
+    margin-top: 0.4rem;
+  }
+}

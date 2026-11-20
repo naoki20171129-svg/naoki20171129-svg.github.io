@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" role="img" aria-label="Deep-learning model">
+  <rect width="200" height="150" rx="18" fill="#f3f6f4"/>
+  <!-- network edges -->
+  <g stroke="#9aa7b3" stroke-width="1.6">
+    <line x1="52" y1="40" x2="100" y2="30"/><line x1="52" y1="40" x2="100" y2="62"/><line x1="52" y1="40" x2="100" y2="94"/>
+    <line x1="52" y1="75" x2="100" y2="30"/><line x1="52" y1="75" x2="100" y2="62"/><line x1="52" y1="75" x2="100" y2="94"/><line x1="52" y1="75" x2="100" y2="124"/>
+    <line x1="52" y1="110" x2="100" y2="62"/><line x1="52" y1="110" x2="100" y2="94"/><line x1="52" y1="110" x2="100" y2="124"/>
+    <line x1="100" y1="30" x2="148" y2="56"/><line x1="100" y1="62" x2="148" y2="56"/><line x1="100" y1="94" x2="148" y2="56"/>
+    <line x1="100" y1="62" x2="148" y2="96"/><line x1="100" y1="94" x2="148" y2="96"/><line x1="100" y1="124" x2="148" y2="96"/>
+  </g>
+  <!-- nodes -->
+  <g stroke="#3a4652" stroke-width="2">
+    <circle cx="52" cy="40" r="10" fill="#c5cdd4"/><circle cx="52" cy="75" r="10" fill="#c5cdd4"/><circle cx="52" cy="110" r="10" fill="#c5cdd4"/>
+    <circle cx="100" cy="30" r="10" fill="#8fb3e0"/><circle cx="100" cy="62" r="10" fill="#8fb3e0"/><circle cx="100" cy="94" r="10" fill="#8fb3e0"/><circle cx="100" cy="124" r="10" fill="#8fb3e0"/>
+    <circle cx="148" cy="56" r="11" fill="#7cc6a4"/><circle cx="148" cy="96" r="11" fill="#f2c46d"/>
+  </g>
+</svg>
