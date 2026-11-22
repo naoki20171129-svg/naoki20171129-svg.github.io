@@ -386,3 +386,358 @@ html[data-lang="en"] .ja {
     margin-top: 0.4rem;
   }
 }
+
+/* =====================================================================
+   作り直し（2026-11-23）: 宇宙 → 植物の物語
+   冒頭は濃紺の夜空、本文は生成り色に細胞壁の網目。アクセントは葉の緑と放射光の琥珀色
+   ===================================================================== */
+:root {
+  --pf-navy: #0b1730;
+  --pf-navy2: #13304a;
+  --pf-paper: #f5f3ec;
+  --pf-green: #2f8f5b;
+  --pf-amber: #f2a33a;
+  --global-theme-color: #2f8f5b;
+  --global-hover-color: #2f8f5b;
+}
+html[data-theme="dark"] {
+  --pf-paper: #10201f;
+  --global-theme-color: #7cd6a4;
+  --global-hover-color: #7cd6a4;
+}
+body:has(.pf-hero) {
+  background: var(--pf-paper) url("cells_bg.svg") repeat;
+  overflow-x: hidden;
+}
+html[data-theme="dark"] body:has(.pf-hero) {
+  background-image: url("cells_bg_dark.svg");
+}
+/* レイアウトの見出し（名前・所属）は冒頭の絵の中に出すので隠す */
+.post:has(.pf-hero) > .post-header {
+  display: none;
+}
+
+/* ---- 冒頭（ページの端から端まで） ---- */
+.pf-hero {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-top: -3rem;
+  padding: 2.2rem 0 3.2rem;
+  color: #eef3fb;
+  background:
+    radial-gradient(1.4px 1.4px at 12% 18%, #ffffffcc 50%, transparent 51%),
+    radial-gradient(1.2px 1.2px at 32% 8%, #ffffffaa 50%, transparent 51%),
+    radial-gradient(1.6px 1.6px at 58% 14%, #ffffffbb 50%, transparent 51%),
+    radial-gradient(1.1px 1.1px at 78% 6%, #ffffff99 50%, transparent 51%),
+    radial-gradient(1.3px 1.3px at 90% 22%, #ffffffaa 50%, transparent 51%),
+    linear-gradient(180deg, rgba(11, 23, 48, 0.94) 0%, rgba(14, 33, 60, 0.9) 60%, rgba(19, 48, 74, 0.96) 100%),
+    url("../img/hero/iss_over_earth_nasa.jpg") center 30% / cover no-repeat;
+}
+.pf-hero::after {
+  /* 夜空から生成り色へ */
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 70px;
+  background: linear-gradient(180deg, rgba(19, 48, 74, 0) 0%, var(--pf-paper) 100%);
+  pointer-events: none;
+}
+.pf-hero span {
+  /* テーマの「span は本文の色」の規則を、夜空の中では親の色に戻す */
+  color: inherit;
+}
+.pf-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+}
+.pf-hero .pf-lang {
+  position: absolute;
+  top: 0;
+  right: 1.2rem;
+  margin: 0;
+}
+.pf-hero .pf-lang .pf-lang-group {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.pf-hero .pf-lang button {
+  color: #eef3fb;
+}
+.pf-hero .pf-lang button[aria-pressed="true"] {
+  background: var(--pf-amber);
+  color: #1b1405;
+}
+.pf-kicker {
+  color: var(--pf-amber);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  font-size: 0.9rem;
+  margin: 0.4rem 0 0.6rem;
+}
+.pf-hero-title {
+  font-size: clamp(1.8rem, 4.2vw, 3.1rem);
+  line-height: 1.28;
+  font-weight: 800;
+  margin: 0 0 0.8rem;
+  color: #ffffff;
+}
+.pf-hero-title em {
+  font-style: normal;
+  color: #9be3b8;
+}
+.pf-hero-name {
+  color: #c7d4e6;
+  font-size: 0.95rem;
+  margin: 0 0 1.4rem;
+}
+.pf-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 1fr;
+  grid-template-rows: 230px 250px;
+  gap: 0.7rem;
+}
+.pf-tile {
+  position: relative;
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #0e2238;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+.pf-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.pf-tile-tall {
+  grid-row: span 2;
+}
+.pf-tile-wide {
+  grid-column: span 2;
+  background: radial-gradient(120% 120% at 70% 40%, #1d4a5c 0%, #0e2238 70%);
+}
+.pf-tile-wide img {
+  object-fit: contain;
+}
+.pf-tile figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.6rem 0.9rem 0.6rem;
+  background: linear-gradient(180deg, rgba(5, 12, 26, 0) 0%, rgba(5, 12, 26, 0.85) 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.98rem;
+  line-height: 1.4;
+}
+.pf-tile figcaption small {
+  display: block;
+  font-weight: 400;
+  font-size: 0.7rem;
+  color: #b9c7d8;
+  margin-top: 0.15rem;
+}
+.pf-facts {
+  list-style: none;
+  padding: 0;
+  margin: 1.3rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+.pf-facts li {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  padding: 0.7rem 0.9rem;
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 0.88rem;
+  color: #d7e2f1;
+  line-height: 1.5;
+}
+.pf-facts b {
+  display: block;
+  font-size: 1.35rem;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+@media (max-width: 767px) {
+  .pf-hero-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 220px 150px 190px;
+  }
+  .pf-tile-tall {
+    grid-row: auto;
+    grid-column: span 2;
+  }
+  .pf-tile-wide {
+    grid-column: span 2;
+  }
+  .pf-facts {
+    grid-template-columns: 1fr;
+  }
+  .pf-hero .pf-lang {
+    position: static;
+    justify-content: flex-end;
+    margin-bottom: 0.6rem;
+  }
+}
+
+/* ---- 見出し（作り直し後は番号なしで大きく） ---- */
+.pf-section h2.pf-h {
+  border: 0;
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+.pf-sub {
+  color: var(--global-text-color-light);
+  margin: 0 0 1.1rem;
+}
+
+/* ---- デモの動画と手順 ---- */
+.pf-demo {
+  display: grid;
+  grid-template-columns: minmax(0, 2.1fr) minmax(0, 1fr);
+  gap: 1.2rem;
+  align-items: center;
+}
+.pf-demo video {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 8px 28px rgba(30, 50, 40, 0.18);
+  background: #f4f1ea;
+  display: block;
+}
+.pf-demo-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: st;
+}
+.pf-demo-steps li {
+  counter-increment: st;
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  padding: 0.55rem 0.7rem;
+  border-radius: 12px;
+  margin-bottom: 0.35rem;
+  cursor: pointer;
+  color: var(--global-text-color-light);
+  transition:
+    background 0.25s,
+    color 0.25s;
+}
+.pf-demo-steps li::before {
+  content: counter(st);
+  flex: 0 0 auto;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border: 2px solid currentColor;
+}
+.pf-demo-steps li.on {
+  background: rgba(47, 143, 91, 0.12);
+  color: var(--global-text-color);
+  font-weight: 700;
+}
+.pf-demo-steps li.on::before {
+  background: var(--global-theme-color);
+  border-color: var(--global-theme-color);
+  color: #ffffff;
+}
+@media (max-width: 767px) {
+  .pf-demo {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- 植物学から見ると ---- */
+.pf-why {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.4rem;
+  align-items: center;
+}
+.pf-why img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+}
+.pf-big {
+  font-size: 1.45rem;
+  font-weight: 800;
+  line-height: 1.5;
+  margin-bottom: 0.6rem;
+}
+.pf-big b {
+  color: var(--global-theme-color);
+}
+@media (max-width: 767px) {
+  .pf-why {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- 節の中の小見出し（修士の研究） ---- */
+.pf-section h3.pf-h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 2.2rem 0 0.9rem;
+}
+
+/* ---- デモの動画の上のラベル（野生型・変異体）。動画の背景は明るいので、暗い表示でも文字は濃い色 ---- */
+.pf-demo-vid {
+  position: relative;
+}
+.pf-demo-lab {
+  position: absolute;
+  top: 3.5%;
+  transform: translateX(-50%);
+  padding: 0.2rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 8px rgba(30, 50, 40, 0.15);
+  font-weight: 700;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.pf-demo-lab,
+.pf-demo-lab span {
+  color: #1d2b27;
+}
+.pf-demo-lab.on {
+  opacity: 1;
+}
+.pf-lab-l {
+  left: 31%;
+  border: 2px solid var(--pf-green);
+}
+.pf-lab-r {
+  left: 69%;
+  border: 2px solid var(--pf-amber);
+}
+@media (max-width: 767px) {
+  .pf-demo-lab {
+    font-size: 0.78rem;
+    padding: 0.1rem 0.6rem;
+  }
+}

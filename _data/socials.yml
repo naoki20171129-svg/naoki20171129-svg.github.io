@@ -1,6 +1,6 @@
 # ページの下に出す連絡先・リンク（並びはこのファイルの順）
 # 書き方は jekyll-socials のドキュメント: https://github.com/george-gca/jekyll-socials
-github_username: naoki20171129-svg # GitHub
+# github_username: naoki20171129-svg # GitHub（まだ載せない。載せるときは先頭の # を消し、about.md の social を true に）
 # email: # メールを載せる場合はここに書く（今は載せていない）
 # scholar_userid: # Google Scholar の ID（作ったら書く）
 # orcid_id: # ORCID（作ったら書く）

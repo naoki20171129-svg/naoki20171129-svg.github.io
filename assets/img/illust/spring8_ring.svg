@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Illustration of a synchrotron storage ring and X-ray beamlines">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1a33"/>
+      <stop offset="1" stop-color="#173a4f"/>
+    </linearGradient>
+    <radialGradient id="hill" cx="0.5" cy="0.2" r="0.8">
+      <stop offset="0" stop-color="#3f7d5c"/>
+      <stop offset="1" stop-color="#244f3c"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowStrong" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+  </defs>
+  <rect width="640" height="400" fill="url(#sky)"/>
+  <!-- stars -->
+  <g fill="#cfe3ff" opacity="0.8">
+    <circle cx="40" cy="30" r="1.4"/><circle cx="120" cy="60" r="1.1"/><circle cx="210" cy="24" r="1.6"/><circle cx="330" cy="44" r="1.2"/>
+    <circle cx="430" cy="20" r="1.5"/><circle cx="520" cy="58" r="1.1"/><circle cx="600" cy="30" r="1.4"/><circle cx="560" cy="100" r="1"/><circle cx="80" cy="110" r="1"/>
+  </g>
+  <!-- hills -->
+  <path d="M0 250 C120 205 220 215 320 228 C430 242 520 200 640 222 L640 400 L0 400 Z" fill="url(#hill)"/>
+  <path d="M0 300 C140 270 260 292 380 300 C500 308 560 286 640 292 L640 400 L0 400 Z" fill="#1f4636" opacity="0.8"/>
+  <!-- storage ring building (seen at an angle) -->
+  <ellipse cx="320" cy="262" rx="236" ry="86" fill="none" stroke="#0e2233" stroke-width="40" opacity="0.35"/>
+  <ellipse cx="320" cy="258" rx="236" ry="86" fill="none" stroke="#d9e2ea" stroke-width="30"/>
+  <ellipse cx="320" cy="258" rx="236" ry="86" fill="none" stroke="#b9c6d2" stroke-width="2" transform="translate(0 9)"/>
+  <ellipse cx="320" cy="258" rx="221" ry="76" fill="none" stroke="#9fb0bf" stroke-width="2"/>
+  <!-- electron orbit (glow) -->
+  <ellipse cx="320" cy="258" rx="236" ry="86" fill="none" stroke="#7ee8ff" stroke-width="3" filter="url(#glowStrong)" opacity="0.9"/>
+  <ellipse cx="320" cy="258" rx="236" ry="86" fill="none" stroke="#c9f6ff" stroke-width="1.6"/>
+  <!-- injector (linac + booster) -->
+  <circle cx="190" cy="235" r="26" fill="none" stroke="#d9e2ea" stroke-width="9"/>
+  <circle cx="190" cy="235" r="26" fill="none" stroke="#7ee8ff" stroke-width="1.4"/>
+  <line x1="120" y1="226" x2="166" y2="230" stroke="#d9e2ea" stroke-width="7" stroke-linecap="round"/>
+  <!-- beamlines: X-rays leave the ring tangentially toward experimental hutches -->
+  <g filter="url(#glow)">
+    <line x1="470" y1="322" x2="606" y2="364" stroke="#ffb347" stroke-width="3"/>
+    <line x1="532" y1="300" x2="628" y2="314" stroke="#ffb347" stroke-width="3"/>
+    <line x1="400" y1="338" x2="520" y2="388" stroke="#ffb347" stroke-width="3"/>
+  </g>
+  <g fill="#e9eef2" stroke="#6b7b89" stroke-width="1.5">
+    <rect x="590" y="352" width="34" height="20" rx="3"/>
+    <rect x="612" y="303" width="26" height="18" rx="3"/>
+    <rect x="506" y="380" width="34" height="18" rx="3"/>
+  </g>
+  <!-- small sample glint at the end of the main beamline -->
+  <circle cx="606" cy="364" r="6" fill="#fff3c4" filter="url(#glow)"/>
+</svg>
